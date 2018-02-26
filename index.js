@@ -16,8 +16,8 @@ module.exports = {
       'error',
       {
         trailingComma: 'es5',
-        singleQuote: true
-      }
-    ]
-  }
+        singleQuote: true,
+      },
+    ],
+  },
 };
