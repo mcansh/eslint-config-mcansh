@@ -1,0 +1,16 @@
+{
+  "name": "eslint-config-mcansh",
+  "version": "1.0.0",
+  "description": "my usual eslint config",
+  "main": "index.js",
+  "repository": "https://github.com/mcansh/eslint-config-mcansh",
+  "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "eslint": "latest"
+  },
+  "peerDependencies": {
+    "eslint": "latest"
+  }
+}
