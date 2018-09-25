@@ -8,7 +8,7 @@ module.exports = {
   parser: 'babel-eslint',
   plugins: ['import', 'prettier'],
   rules: {
-    'no-param-reassign': [2, { props: false }],
+    'no-param-reassign': ['error', { props: false }],
     'prettier/prettier': [
       'error',
       {

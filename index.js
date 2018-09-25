@@ -8,10 +8,10 @@ module.exports = {
   parser: 'babel-eslint',
   plugins: ['react', 'jsx-a11y', 'import', 'prettier'],
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'react/jsx-closing-tag-location': 0,
-    'react/jsx-curly-brace-presence': 0,
-    'no-param-reassign': [2, { props: false }],
+    'react/jsx-filename-extension': ['warning', { extensions: ['.js', '.jsx'] }],
+    'react/jsx-closing-tag-location': 'off',
+    'react/jsx-curly-brace-presence': 'off',
+    'no-param-reassign': ['error', { props: false }],
     'prettier/prettier': [
       'error',
       {
@@ -23,9 +23,8 @@ module.exports = {
       'error',
       {
         components: ['Link'],
-        specialLink: ['hrefLeft', 'hrefRight'],
-        aspects: ['invalidHref', 'preferButton'],
-      },
+        specialLink: ['href']
+      }
     ],
     'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
   },
