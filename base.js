@@ -6,7 +6,7 @@ module.exports = {
     es6: true,
   },
   parser: 'babel-eslint',
-  plugins: ['import', 'prettier'],
+  plugins: ['import', 'prettier', 'promise'],
   rules: {
     'no-param-reassign': ['error', { props: false }],
     'prettier/prettier': [

@@ -6,9 +6,12 @@ module.exports = {
     es6: true,
   },
   parser: 'babel-eslint',
-  plugins: ['react', 'jsx-a11y', 'import', 'prettier'],
+  plugins: ['react', 'jsx-a11y', 'import', 'prettier', 'promise'],
   rules: {
-    'react/jsx-filename-extension': ['warning', { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [
+      'warning',
+      { extensions: ['.js', '.jsx'] },
+    ],
     'react/jsx-closing-tag-location': 'off',
     'react/jsx-curly-brace-presence': 'off',
     'no-param-reassign': ['error', { props: false }],
@@ -23,8 +26,8 @@ module.exports = {
       'error',
       {
         components: ['Link'],
-        specialLink: ['href']
-      }
+        specialLink: ['href'],
+      },
     ],
     'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
   },
