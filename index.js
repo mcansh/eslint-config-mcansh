@@ -8,10 +8,7 @@ module.exports = {
   parser: 'babel-eslint',
   plugins: ['react', 'jsx-a11y', 'import', 'prettier', 'promise'],
   rules: {
-    'react/jsx-filename-extension': [
-      'warning',
-      { extensions: ['.js', '.jsx'] },
-    ],
+    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
     'react/jsx-closing-tag-location': 'off',
     'react/jsx-curly-brace-presence': 'off',
     'no-param-reassign': ['error', { props: false }],
