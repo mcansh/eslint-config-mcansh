@@ -23,7 +23,8 @@ module.exports = {
       'error',
       {
         components: ['Link'],
-        specialLink: ['href'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
       },
     ],
     'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
