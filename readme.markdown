@@ -19,8 +19,16 @@ then install the peerDependencies
 
 followed by adding it to your eslint config
 
+for react
 ```javascript
 module.exports = {
   extends: ['mcansh'],
+}
+```
+
+for everything else
+```javascript
+module.exports = {
+  extends: ['mcansh/base'],
 }
 ```
