@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mcansh",
-  "version": "1.0.9",
+  "version": "1.1.0-canary.0",
   "description": "my usual eslint config",
   "main": "index.js",
   "repository": "https://github.com/mcansh/eslint-config-mcansh",
@@ -20,8 +20,8 @@
     "eslint-config-airbnb": "latest",
     "eslint-config-airbnb-base": "latest",
     "eslint-import-resolver-typescript": "latest",
-    "eslint-plugin-jsx-a11y": "latest",
     "eslint-plugin-jest": "latest",
+    "eslint-plugin-jsx-a11y": "latest",
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-typescript": "latest",
