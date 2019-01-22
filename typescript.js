@@ -41,6 +41,7 @@ module.exports = {
     'react/jsx-curly-brace-presence': 'off',
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    "@typescript-eslint/camelcase": ["error", { "properties": "never" }]
+    '@typescript-eslint/camelcase': ['error', { 'properties': 'never' }],
+    '@typescript-eslint/explicit-member-accessibility': 'off'
   }
 }
