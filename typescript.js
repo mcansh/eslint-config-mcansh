@@ -20,6 +20,7 @@ module.exports = {
     },
   },
   rules: {
+    'no-param-reassign': ['error', { props: false }],
     'react-hooks/rules-of-hooks': 'error',
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }],
     'prettier/prettier': [
