@@ -1,43 +1,46 @@
 module.exports = {
-  extends: ['./index.js', 'plugin:jsx-a11y/strict'],
-  plugins: ['jest', 'react-hooks'],
-  parser: 'pluggable-babel-eslint',
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-    plugins: ['typescript'],
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    jest: true
   },
+  extends: [
+    'airbnb',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jsx-a11y/strict',
+    'prettier',
+    'prettier/react'
+  ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'prettier', 'jest', 'react-hooks'],
   settings: {
-    'import/parsers': {
-      'typescript-eslint-parser': ['.ts', '.tsx'],
-    },
-    'import/resolver': {
-      typescript: {},
+    "import/resolver": {
+      "typescript": {},
     },
   },
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }],
-    'import/default': 'error',
-    'import/order': 'error',
-    'import/export': 'error',
-    'import/newline-after-import': 'error',
-    'import/extensions': ['error', 'never', { svg: 'always', json: 'always' }],
-    'import/first': 'error',
-    'import/no-absolute-path': 'error',
-    'import/no-anonymous-default-export': 'error',
-    'import/no-duplicates': 'error',
-    'import/prefer-default-export': 'error',
-    'import/no-self-import': 'error',
-    'import/no-unresolved': 'error',
-    'no-undef': 'off',
     'prettier/prettier': [
       'error',
       {
         trailingComma: 'es5',
         singleQuote: true,
-        parser: 'typescript',
+        parser: 'typescript'
       },
     ],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
+      },
+    ],
+    'react/jsx-curly-brace-presence': 'off',
+    '@typescript-eslint/indent': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    "@typescript-eslint/camelcase": ["error", { "properties": "never" }]
   }
 }
