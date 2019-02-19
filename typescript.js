@@ -21,8 +21,9 @@ module.exports = {
   },
   rules: {
     'no-param-reassign': ['error', { props: false }],
-    'react-hooks/rules-of-hooks': 'error',
-    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }],
+    'react-hooks/rules-of-hooks': 'error', // react hooks 🎣
+    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }], // allow tsx file extensions
+    'no-undef': 'off', // typescript handles this for us
     'prettier/prettier': [
       'error',
       {
