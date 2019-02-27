@@ -22,6 +22,9 @@ module.exports = {
     },
   },
   rules: {
+    /* core rules */
+    'no-undef': 'off', // typescript handles this for us
+    
     /* react rules */
     'react/jsx-filename-extension': ['warn', { extensions: reactExtensions }],
 
