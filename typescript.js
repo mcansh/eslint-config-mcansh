@@ -1,30 +1,31 @@
 const jsExtensions = ['.js', '.jsx'];
 const tsExtensions = ['.ts', '.tsx'];
-const allExtensions = [...jsExtensions, ...tsExtensions];
-const reactExtensions = [...jsExtensions, '.tsx'];
+const allExtensions = jsExtensions.concat(tsExtensions);
+const reactExtensions = jsExtensions.concat(['.tsx']);
 
 module.exports = {
   extends: [
-    'plugin:import/typescript',
+    './index.js',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    './index.js',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   settings: {
     'import/extensions': allExtensions,
     'import/parsers': {
-      '@typescript-eslint/parser': ['.tsx', '.ts'],
+      '@typescript-eslint/parser': tsExtensions,
     },
     'import/resolver': {
-      node: { allExtensions },
+      node: {
+        extensions: allExtensions,
+      },
     },
   },
   rules: {
     /* core rules */
     'no-undef': 'off', // typescript handles this for us
-    
+
     /* react rules */
     'react/jsx-filename-extension': ['warn', { extensions: reactExtensions }],
 
