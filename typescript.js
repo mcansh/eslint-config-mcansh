@@ -5,6 +5,7 @@ const reactExtensions = [...jsExtensions, '.tsx'];
 
 module.exports = {
   extends: [
+    'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
     './index.js',
