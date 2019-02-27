@@ -2,9 +2,7 @@ module.exports = {
   extends: [
     'airbnb-base',
     'kentcdodds/jest',
-    'plugin:compat/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
+    'kentcdodds/import',
     'plugin:promise/recommended',
     'prettier',
   ],
@@ -15,7 +13,7 @@ module.exports = {
     jest: true,
   },
   parser: 'babel-eslint',
-  plugins: ['import', 'prettier', 'promise', 'compat'],
+  plugins: ['import', 'prettier', 'promise'],
   rules: {
     /* import rule */
     'import/no-named-export': 'off',
