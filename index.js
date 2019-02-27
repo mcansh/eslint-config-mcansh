@@ -1,15 +1,12 @@
-// https://github.com/kentcdodds/eslint-config-kentcdodds
-
 const readPkgUp = require('read-pkg-up');
 const semver = require('semver');
 
-let oldestSupportedReactVersion = '16.5.2';
+let oldestSupportedReactVersion = '16.8.0';
 
 try {
   const pkg = readPkgUp.sync({ normalize: true });
-  // eslint-disable-next-line prefer-object-spread
   const allDeps = Object.assign(
-    { react: '16.5.2' },
+    { react: '16.8.0' },
     pkg.peerDependencies,
     pkg.devDependencies,
     pkg.dependencies
@@ -26,38 +23,36 @@ try {
 }
 
 module.exports = {
-  extends: [
-    'airbnb',
-    'prettier',
-    'prettier/react',
-    './base.js',
-    './jsx-a11y.js',
-  ],
+  extends: ['./base.js', 'airbnb', 'plugin:jsx-a11y/strict', 'prettier/react'],
   env: {
     browser: true,
     node: true,
     es6: true,
+    jest: true,
   },
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: '2019',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ['react', 'react-hooks', 'jsx-a11y'],
   settings: {
     react: {
       version: oldestSupportedReactVersion,
     },
   },
-  parser: 'babel-eslint',
-  plugins: ['react', 'prettier', 'react-hooks', 'jest'],
   rules: {
-    'react-hooks/rules-of-hooks': 'error',
+    /* react rules */
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
     'react/jsx-closing-tag-location': 'off',
     'react/jsx-curly-brace-presence': 'off',
-    'no-param-reassign': ['error', { props: false }],
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-      },
-    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react/jsx-fragments': ['error', 'syntax'],
+
+    /* jsx-a11y rules */
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -66,8 +61,5 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
-    'react/jsx-fragments': ['error', 'syntax'],
-    'no-useless-catch': 'error',
   },
 };

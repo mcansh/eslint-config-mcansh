@@ -1,14 +1,10 @@
+const extensions = ['.js', '.jsx', '.tsx'];
+
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    node: true,
-    jest: true,
-  },
   extends: [
+    './index.js',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jsx-a11y/strict',
-    './react.js',
+    'prettier/@typescript-eslint',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -18,13 +14,16 @@ module.exports = {
     },
   },
   rules: {
-    'react/jsx-filename-extension': [
-      'warn',
-      { extensions: ['.js', '.jsx', '.tsx'] },
-    ],
-    'no-undef': 'off', // typescript handles this for us
+    /* react rules */
+    'react/jsx-filename-extension': ['warn', { extensions }],
+
+    /* typescript rules */
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
+
+    /* core rules */
+    'no-undef': 'off', // typescript handles this for us
   },
 };

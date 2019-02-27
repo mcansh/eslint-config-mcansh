@@ -1,10 +1,12 @@
 module.exports = {
   extends: [
     'airbnb-base',
+    'plugin:compat/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:promise/recommended',
+    'plugin:jest/recommended',
     'prettier',
-    './import.js',
-    './compat.js',
-    './promise.js',
   ],
   env: {
     browser: true,
@@ -13,11 +15,21 @@ module.exports = {
     jest: true,
   },
   parser: 'babel-eslint',
-  plugins: ['prettier'],
+  plugins: ['import', 'prettier', 'promise', 'jest', 'compat'],
   rules: {
+    /* import rule */
     'import/no-named-export': 'off',
-    'no-useless-catch': 'error',
+
+    /* promise rules */
+    'promise/prefer-await-to-callbacks': 'error',
+    'promise/prefer-await-to-then': 'error',
+
+    /* core rules */
     'no-param-reassign': ['error', { props: false }],
+    'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
+    'no-useless-catch': 'error',
+
+    /* prettier */
     'prettier/prettier': [
       'error',
       {
