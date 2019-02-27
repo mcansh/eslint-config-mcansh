@@ -1,49 +1,29 @@
+const extensions = ['.js', '.jsx', '.tsx'];
+
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    node: true,
-    jest: true
-  },
   extends: [
-    'airbnb',
+    './index.js',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jsx-a11y/strict',
-    'prettier',
-    'prettier/react'
+    'prettier/@typescript-eslint',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier', 'jest', 'react-hooks'],
+  plugins: ['@typescript-eslint'],
   settings: {
-    "import/resolver": {
-      "typescript": {},
+    'import/resolver': {
+      typescript: {},
     },
   },
   rules: {
-    'no-param-reassign': ['error', { props: false }],
-    'react-hooks/rules-of-hooks': 'error', // react hooks 🎣
-    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }], // allow tsx file extensions
-    'no-undef': 'off', // typescript handles this for us
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-        parser: 'typescript'
-      },
-    ],
-    'jsx-a11y/anchor-is-valid': [
-      'error',
-      {
-        components: ['Link'],
-        specialLink: ['hrefLeft', 'hrefRight'],
-        aspects: ['invalidHref', 'preferButton'],
-      },
-    ],
-    'react/jsx-curly-brace-presence': 'off',
+    /* react rules */
+    'react/jsx-filename-extension': ['warn', { extensions }],
+
+    /* typescript rules */
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/camelcase': ['error', { 'properties': 'never' }],
-    '@typescript-eslint/explicit-member-accessibility': 'off'
-  }
-}
+    '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
+
+    /* core rules */
+    'no-undef': 'off', // typescript handles this for us
+  },
+};

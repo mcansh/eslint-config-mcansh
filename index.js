@@ -1,24 +1,58 @@
+const readPkgUp = require('read-pkg-up');
+const semver = require('semver');
+
+let oldestSupportedReactVersion = '16.8.0';
+
+try {
+  const pkg = readPkgUp.sync({ normalize: true });
+  const allDeps = Object.assign(
+    { react: '16.8.0' },
+    pkg.peerDependencies,
+    pkg.devDependencies,
+    pkg.dependencies
+  );
+  const [version] = semver
+    .validRange(allDeps.react)
+    .replace(/[>=<|]/g, ' ')
+    .split(' ')
+    .filter(Boolean)
+    .sort(semver.compare);
+  oldestSupportedReactVersion = version;
+} catch (error) {
+  // ignore error
+}
+
 module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  extends: ['./base.js', 'airbnb', 'plugin:jsx-a11y/strict', 'prettier/react'],
   env: {
     browser: true,
     node: true,
     es6: true,
+    jest: true,
   },
   parser: 'babel-eslint',
-  plugins: ['react', 'jsx-a11y', 'import', 'prettier', 'promise'],
+  parserOptions: {
+    ecmaVersion: '2019',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ['react', 'react-hooks', 'jsx-a11y'],
+  settings: {
+    react: {
+      version: oldestSupportedReactVersion,
+    },
+  },
   rules: {
+    /* react rules */
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
     'react/jsx-closing-tag-location': 'off',
     'react/jsx-curly-brace-presence': 'off',
-    'no-param-reassign': ['error', { props: false }],
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-      },
-    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react/jsx-fragments': ['error', 'syntax'],
+
+    /* jsx-a11y rules */
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -27,6 +61,5 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
   },
 };
