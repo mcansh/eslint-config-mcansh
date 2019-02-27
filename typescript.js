@@ -3,47 +3,28 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
-    jest: true
+    jest: true,
   },
   extends: [
-    'airbnb',
     'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/strict',
-    'prettier',
-    'prettier/react'
+    './react.js',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier', 'jest', 'react-hooks'],
+  plugins: ['@typescript-eslint'],
   settings: {
-    "import/resolver": {
-      "typescript": {},
+    'import/resolver': {
+      typescript: {},
     },
   },
   rules: {
-    'no-param-reassign': ['error', { props: false }],
-    'react-hooks/rules-of-hooks': 'error', // react hooks 🎣
-    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }], // allow tsx file extensions
+    'react/jsx-filename-extension': [
+      'warn',
+      { extensions: ['.js', '.jsx', '.tsx'] },
+    ],
     'no-undef': 'off', // typescript handles this for us
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-        parser: 'typescript'
-      },
-    ],
-    'jsx-a11y/anchor-is-valid': [
-      'error',
-      {
-        components: ['Link'],
-        specialLink: ['hrefLeft', 'hrefRight'],
-        aspects: ['invalidHref', 'preferButton'],
-      },
-    ],
-    'react/jsx-curly-brace-presence': 'off',
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/camelcase': ['error', { 'properties': 'never' }],
-    '@typescript-eslint/explicit-member-accessibility': 'off'
-  }
-}
+    '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+  },
+};
