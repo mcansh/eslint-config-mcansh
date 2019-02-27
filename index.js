@@ -23,7 +23,15 @@ try {
 }
 
 module.exports = {
-  extends: ['airbnb', 'plugin:jsx-a11y/strict', 'prettier/react', './base.js'],
+  extends: [
+    'airbnb',
+    'kentcdodds/jsx-a11y',
+    'kentcdodds/jest',
+    'kentcdodds/import',
+    'plugin:promise/recommended',
+    'prettier',
+    'prettier/react',
+  ],
   env: {
     browser: true,
     node: true,
@@ -38,7 +46,14 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['react', 'react-hooks', 'jsx-a11y'],
+  plugins: [
+    'import',
+    'prettier',
+    'promise',
+    'react',
+    'react-hooks',
+    'jsx-a11y',
+  ],
   settings: {
     react: {
       version: oldestSupportedReactVersion,
@@ -62,6 +77,30 @@ module.exports = {
         components: ['Link'],
         specialLink: ['hrefLeft', 'hrefRight'],
         aspects: ['invalidHref', 'preferButton'],
+      },
+    ],
+
+    /* import rule */
+    'import/no-named-export': 'off',
+
+    /* promise rules */
+    'promise/prefer-await-to-callbacks': 'error',
+    'promise/prefer-await-to-then': 'error',
+
+    /* core rules */
+    'no-param-reassign': ['error', { props: false }],
+    'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
+    'no-useless-catch': 'error',
+
+    /* jest rules */
+    'jest/prefer-called-with': 'error',
+
+    /* prettier */
+    'prettier/prettier': [
+      'error',
+      {
+        trailingComma: 'es5',
+        singleQuote: true,
       },
     ],
   },
