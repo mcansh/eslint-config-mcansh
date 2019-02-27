@@ -1,24 +1,76 @@
+const readPkgUp = require('read-pkg-up');
+const semver = require('semver');
+
+let oldestSupportedReactVersion = '16.8.0';
+
+try {
+  const pkg = readPkgUp.sync({ normalize: true });
+  const allDeps = Object.assign(
+    { react: '16.8.0' },
+    pkg.peerDependencies,
+    pkg.devDependencies,
+    pkg.dependencies
+  );
+  const [version] = semver
+    .validRange(allDeps.react)
+    .replace(/[>=<|]/g, ' ')
+    .split(' ')
+    .filter(Boolean)
+    .sort(semver.compare);
+  oldestSupportedReactVersion = version;
+} catch (error) {
+  // ignore error
+}
+
 module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  extends: [
+    'airbnb',
+    'kentcdodds/jsx-a11y',
+    'kentcdodds/jest',
+    'kentcdodds/import',
+    'plugin:promise/recommended',
+    'prettier',
+    'prettier/react',
+  ],
   env: {
     browser: true,
     node: true,
     es6: true,
+    jest: true,
   },
   parser: 'babel-eslint',
-  plugins: ['react', 'jsx-a11y', 'import', 'prettier', 'promise'],
+  parserOptions: {
+    ecmaVersion: '2019',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: [
+    'import',
+    'prettier',
+    'promise',
+    'react',
+    'react-hooks',
+    'jsx-a11y',
+  ],
+  settings: {
+    react: {
+      version: oldestSupportedReactVersion,
+    },
+  },
   rules: {
+    /* react rules */
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
     'react/jsx-closing-tag-location': 'off',
     'react/jsx-curly-brace-presence': 'off',
-    'no-param-reassign': ['error', { props: false }],
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-      },
-    ],
+    'react/jsx-fragments': ['error', 'syntax'],
+
+    /* react-hooks rules */
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
+
+    /* jsx-a11y rules */
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -27,6 +79,29 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
+
+    /* import rule */
+    'import/no-named-export': 'off',
+
+    /* promise rules */
+    'promise/prefer-await-to-callbacks': 'error',
+    'promise/prefer-await-to-then': 'error',
+
+    /* core rules */
+    'no-param-reassign': ['error', { props: false }],
     'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
+    'no-useless-catch': 'error',
+
+    /* jest rules */
+    'jest/prefer-called-with': 'error',
+
+    /* prettier */
+    'prettier/prettier': [
+      'error',
+      {
+        trailingComma: 'es5',
+        singleQuote: true,
+      },
+    ],
   },
 };
