@@ -10,19 +10,34 @@ An eslint config based on airbnb's with common rule changes I make.
 
 then install the peerDependencies
 
+base config:
 ```bash
-  (
-    export PKG=eslint-config-mcansh;
-    npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs yarn add -D "$PKG@latest"
-  )
+yarn add -D eslint eslint-config-{airbnb-base,kentcdodds,prettier} eslint-plugin-{promise,import,prettier} prettier babel-eslint
+```
+
+default react:
+```bash
+default react: yarn add -D eslint eslint-config-{airbnb,kentcdodds,prettier} eslint-plugin-{import,prettier,promise,react,react-hooks,jsx-a11y}
+```
+
+typescript react:
+```bash
+yarn add -D eslint eslint-config-{airbnb,kentcdodds,prettier} eslint-plugin-{import,prettier,promise,react,react-hooks,jsx-a11y} @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
 followed by adding it to your eslint config
 
-for react
+for react (javascript)
 ```javascript
 module.exports = {
   extends: ['mcansh'],
+}
+```
+
+for react (typescript)
+```typescript
+module.exports = {
+  extends: ['mcansh/typescript']
 }
 ```
 
