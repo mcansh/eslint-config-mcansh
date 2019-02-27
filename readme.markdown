@@ -16,3 +16,19 @@ then install the peerDependencies
     npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs yarn add -D "$PKG@latest"
   )
 ```
+
+followed by adding it to your eslint config
+
+for react
+```javascript
+module.exports = {
+  extends: ['mcansh'],
+}
+```
+
+for everything else
+```javascript
+module.exports = {
+  extends: ['mcansh/base'],
+}
+```
