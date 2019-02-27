@@ -23,7 +23,7 @@ try {
 }
 
 module.exports = {
-  extends: ['./base.js', 'airbnb', 'plugin:jsx-a11y/strict', 'prettier/react'],
+  extends: ['airbnb', 'plugin:jsx-a11y/strict', 'prettier/react', './base.js'],
   env: {
     browser: true,
     node: true,
@@ -49,8 +49,11 @@ module.exports = {
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
     'react/jsx-closing-tag-location': 'off',
     'react/jsx-curly-brace-presence': 'off',
-    'react-hooks/rules-of-hooks': 'error',
     'react/jsx-fragments': ['error', 'syntax'],
+
+    /* react-hooks rules */
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
 
     /* jsx-a11y rules */
     'jsx-a11y/anchor-is-valid': [
