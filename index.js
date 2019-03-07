@@ -68,7 +68,7 @@ module.exports = {
 
     /* react-hooks rules */
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
 
     /* jsx-a11y rules */
     'jsx-a11y/anchor-is-valid': [
