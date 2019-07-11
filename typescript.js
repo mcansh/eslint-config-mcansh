@@ -32,7 +32,10 @@ module.exports = {
     /* typescript rules */
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
-    '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { ignoreRestSiblings: true, argsIgnorePattern: 'res|next|^err|^_' },
+    ],
     '@typescript-eslint/explicit-member-accessibility': 'off',
   },
 };
