@@ -29,6 +29,12 @@ module.exports = {
         'spaced-comment': ['error', 'always', { markers: ['/'] }],
       },
     },
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
   ],
   rules: {
     /* core rules */
