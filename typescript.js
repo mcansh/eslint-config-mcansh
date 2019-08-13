@@ -22,6 +22,14 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ['*.d.ts'],
+      rules: {
+        'spaced-comment': ['error', 'always', { markers: ['/'] }],
+      },
+    },
+  ],
   rules: {
     /* core rules */
     'no-undef': 'off', // typescript handles this for us
