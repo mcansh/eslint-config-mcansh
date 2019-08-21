@@ -26,7 +26,7 @@ module.exports = {
     {
       files: ['*.d.ts'],
       rules: {
-        'spaced-comment': ['error', 'always', { markers: ['/'] }],
+        'spaced-comment': ['error', 'always', { markers: ['/ <reference'] }],
       },
     },
     {
