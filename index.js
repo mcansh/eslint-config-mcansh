@@ -60,6 +60,12 @@ module.exports = {
     },
   },
   rules: {
+    /* core rules */
+    'no-param-reassign': ['error', { props: false }],
+    'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
+    'no-useless-catch': 'error',
+    'arrow-body-style': ['error', 'as-needed'],
+    
     /* react rules */
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
     'react/jsx-closing-tag-location': 'off',
@@ -86,11 +92,6 @@ module.exports = {
     /* promise rules */
     'promise/prefer-await-to-callbacks': 'error',
     'promise/prefer-await-to-then': 'error',
-
-    /* core rules */
-    'no-param-reassign': ['error', { props: false }],
-    'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
-    'no-useless-catch': 'error',
 
     /* jest rules */
     'jest/prefer-called-with': 'error',
