@@ -4,7 +4,6 @@ module.exports = {
     'kentcdodds/jest',
     'kentcdodds/import',
     'plugin:promise/recommended',
-    'prettier',
   ],
   env: {
     browser: true,
@@ -13,7 +12,7 @@ module.exports = {
     jest: true,
   },
   parser: 'babel-eslint',
-  plugins: ['import', 'prettier', 'promise'],
+  plugins: ['import', 'promise'],
   rules: {
     /* import rule */
     'import/no-named-export': 'off',
@@ -29,14 +28,5 @@ module.exports = {
 
     /* jest rules */
     'jest/prefer-called-with': 'error',
-
-    /* prettier */
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-      },
-    ],
   },
 };

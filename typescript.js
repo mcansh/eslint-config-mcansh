@@ -4,11 +4,7 @@ const allExtensions = jsExtensions.concat(tsExtensions);
 const reactExtensions = jsExtensions.concat(['.tsx']);
 
 module.exports = {
-  extends: [
-    './index.js',
-    'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
-  ],
+  extends: ['./index.js', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   settings: {

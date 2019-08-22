@@ -9,7 +9,7 @@ try {
     { react: '16.8.0' },
     pkg.peerDependencies,
     pkg.devDependencies,
-    pkg.dependencies
+    pkg.dependencies,
   );
   const [version] = semver
     .validRange(allDeps.react)
@@ -29,8 +29,6 @@ module.exports = {
     'kentcdodds/jest',
     'kentcdodds/import',
     'plugin:promise/recommended',
-    'prettier',
-    'prettier/react',
   ],
   env: {
     browser: true,
@@ -48,7 +46,6 @@ module.exports = {
   },
   plugins: [
     'import',
-    'prettier',
     'promise',
     'react',
     'react-hooks',
@@ -65,7 +62,7 @@ module.exports = {
     'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
     'no-useless-catch': 'error',
     'arrow-body-style': ['error', 'as-needed'],
-    
+
     /* react rules */
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
     'react/jsx-closing-tag-location': 'off',
@@ -95,14 +92,5 @@ module.exports = {
 
     /* jest rules */
     'jest/prefer-called-with': 'error',
-
-    /* prettier */
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-      },
-    ],
   },
 };
