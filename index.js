@@ -15,5 +15,6 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
+    'max-lines-per-function': 'off',
   },
 };
