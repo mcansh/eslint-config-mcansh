@@ -1,7 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  extends: ['./index.js', 'eslint:recommended', 'prettier'],
+  extends: [
+    './index.js',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'prettier',
+  ],
   overrides: [
     {
       files: ['*.d.ts'],
@@ -12,7 +17,6 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       extends: [
-        'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'prettier/@typescript-eslint',
       ],
