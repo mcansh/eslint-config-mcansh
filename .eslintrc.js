@@ -4,10 +4,8 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: [
-          'prettier.config.js',
-        ],
+        devDependencies: ['prettier.config.js'],
       },
     ],
-  }
-}
+  },
+};
