@@ -15,16 +15,6 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    // enforce a maximum function length
-    // https://eslint.org/docs/rules/max-lines-per-function
-    'max-lines-per-function': [
-      'off',
-      {
-        max: 50,
-        skipBlankLines: true,
-        skipComments: true,
-        IIFEs: true,
-      },
-    ],
+    'max-lines-per-function': 'off',
   },
 };
