@@ -1,12 +1,19 @@
 module.exports = {
   extends: [
-    'kentcdodds',
+    'airbnb',
+    'kentcdodds/possible-errors',
+    'kentcdodds/best-practices',
+    'kentcdodds/stylistic',
+    'kentcdodds/es6',
+    'kentcdodds/import',
     'kentcdodds/react',
     'kentcdodds/jsx-a11y',
     'kentcdodds/jest',
+    './common.js',
+    'prettier',
+    'prettier/react',
   ],
   rules: {
-    // fixes a false positive for next.js link component https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/402#issuecomment-368305051
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -15,6 +22,6 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    'max-lines-per-function': 'off',
+    'react/jsx-pascal-case': 'off',
   },
 };

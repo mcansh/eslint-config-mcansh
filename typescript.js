@@ -5,7 +5,6 @@ module.exports = {
     './index.js',
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'prettier',
   ],
   overrides: [
     {
@@ -26,22 +25,22 @@ module.exports = {
         project: path.join(process.cwd(), 'tsconfig.json'),
       },
       rules: {
-        // typescript rules
         '@typescript-eslint/no-magic-numbers': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          2,
+          {
+            argsIgnorePattern: '^_',
+            varsIgnorePattern: '^ignored',
+            args: 'after-used',
+            ignoreRestSiblings: true,
+          },
+        ],
       },
     },
   ],
   rules: {
-    // core rules
-    'arrow-parens': ['error', 'as-needed'],
-    'no-console': 'warn',
-
-    // babel rules
-    'babel/camelcase': ['error', { properties: 'never' }],
-
     // react rules
-    'react/display-name': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.tsx'] }],
   },
 };
