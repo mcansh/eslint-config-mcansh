@@ -42,5 +42,6 @@ module.exports = {
 
     // react rules
     'react/display-name': 'off',
+    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.tsx'] }],
   },
 };
