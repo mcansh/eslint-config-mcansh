@@ -1,3 +1,12 @@
 module.exports = {
-  ...require('@mcansh/prettier-config'),
+  printWidth: 80,
+  tabWidth: 2,
+  useTabs: false,
+  semi: true,
+  singleQuote: true,
+  trailingComma: 'es5',
+  bracketSpacing: true,
+  jsxBracketSameLine: false,
+  proseWrap: 'always',
+  arrowParens: 'avoid',
 };
