@@ -28,7 +28,7 @@ module.exports = {
         '@typescript-eslint/no-magic-numbers': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-unused-vars': [
-          2,
+          'error',
           {
             argsIgnorePattern: '^_',
             varsIgnorePattern: '^ignored',
