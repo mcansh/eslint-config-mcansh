@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-mcansh",
+  "name": "@mcansh/eslint-config",
   "version": "2.1.1",
   "description": "my usual eslint config",
   "main": "index.js",
@@ -13,6 +13,9 @@
     "typescript.js",
     "prettier.config.js"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "private": false,
   "scripts": {
     "lint": "eslint .",
