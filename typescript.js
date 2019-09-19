@@ -25,6 +25,7 @@ module.exports = {
         project: path.join(process.cwd(), 'tsconfig.json'),
       },
       rules: {
+        'react/prop-types': 'off',
         '@typescript-eslint/no-magic-numbers': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-unused-vars': [
