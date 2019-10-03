@@ -188,11 +188,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@mcansh/prettier-config@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@mcansh/prettier-config/-/prettier-config-1.0.1.tgz#2e8dc3b7fae952d1d0be1213716a749221ed0847"
-  integrity sha512-oGpCimCh0BhlIBHYOuHL5aPgfO1POuZQFvFx/PMYr+0qzFeD+LlRJ9eXmECmA72w0r0TBSwXUBWspiuBvG8Pqg==
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
