@@ -6,6 +6,12 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
   ],
+  settings: {
+    'import/resolver': {
+      'babel-plugin-root-import': {},
+      typescript: {},
+    },
+  },
   overrides: [
     {
       files: ['*.d.ts'],
@@ -25,10 +31,12 @@ module.exports = {
         project: path.join(process.cwd(), 'tsconfig.json'),
       },
       rules: {
-        'react/prop-types': 'off',
+        'react/prop-types': 'off', // handled by using React.FC<Props>
 
+        '@typescript-eslint/explicit-member-accessibility': 'error',
         '@typescript-eslint/no-magic-numbers': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
         '@typescript-eslint/no-unused-vars': [
           'error',
           {
@@ -42,7 +50,6 @@ module.exports = {
     },
   ],
   rules: {
-    // react rules
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.tsx'] }],
   },
 };
