@@ -97,11 +97,6 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@mcansh/prettier-config@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@mcansh/prettier-config/-/prettier-config-1.0.1.tgz#2e8dc3b7fae952d1d0be1213716a749221ed0847"
-  integrity sha512-oGpCimCh0BhlIBHYOuHL5aPgfO1POuZQFvFx/PMYr+0qzFeD+LlRJ9eXmECmA72w0r0TBSwXUBWspiuBvG8Pqg==
-
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
