@@ -11,7 +11,8 @@
     "common.js",
     "index.js",
     "typescript.js",
-    "prettier.config.js"
+    "prettier.config.js",
+    "stylelint.config.js"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
