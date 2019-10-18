@@ -11,6 +11,7 @@
     "common.js",
     "index.js",
     "typescript.js",
+    "ts-no-babel.js",
     "prettier.config.js",
     "stylelint.config.js"
   ],
