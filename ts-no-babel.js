@@ -5,6 +5,8 @@ const { settings, ...config } = tsConfig;
 module.exports = {
   ...config,
   settings: {
-    typescript: {},
+    'import/resolver': {
+      typescript: {},
+    },
   },
 };
