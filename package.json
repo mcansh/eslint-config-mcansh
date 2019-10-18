@@ -15,9 +15,6 @@
     "prettier.config.js",
     "stylelint.config.js"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "private": false,
   "scripts": {
     "lint": "eslint .",
