@@ -6,15 +6,6 @@
   "repository": "https://github.com/mcansh/eslint-config-mcansh",
   "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
   "license": "MIT",
-  "files": [
-    "base.js",
-    "common.js",
-    "index.js",
-    "typescript.js",
-    "ts-no-babel.js",
-    "prettier.config.js",
-    "stylelint.config.js"
-  ],
   "private": false,
   "scripts": {
     "lint": "eslint .",
