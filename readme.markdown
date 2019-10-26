@@ -5,7 +5,7 @@ An eslint config based on airbnb's with common rule changes I make.
 ## Installation
 
 ```bash
-$ yarn add -D eslint-config-mcansh
+$ yarn add -D @mcansh/eslint-config
 ```
 
 then install the peerDependencies
