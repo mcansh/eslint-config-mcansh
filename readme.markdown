@@ -36,6 +36,6 @@ for everything else
 
 ```javascript
 module.exports = {
-  extends: ['@mcansh/base'],
+  extends: ['@mcansh/eslint-config/base'],
 };
 ```
