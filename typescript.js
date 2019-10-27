@@ -4,6 +4,7 @@ module.exports = {
   extends: [
     './index.js',
     'eslint:recommended',
+    'plugin:import/typescript',
     'plugin:@typescript-eslint/eslint-recommended',
   ],
   settings: {
