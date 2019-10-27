@@ -1,6 +1,6 @@
 {
   "name": "@mcansh/eslint-config",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "my usual eslint config",
   "main": "index.js",
   "repository": "https://github.com/mcansh/eslint-config-mcansh",
