@@ -8,6 +8,7 @@ module.exports = {
     'kentcdodds/import',
     'kentcdodds/react',
     'kentcdodds/jsx-a11y',
+    'kentcdodds/jest',
     './common.js',
     'prettier',
     'prettier/react',
