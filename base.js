@@ -6,6 +6,7 @@ module.exports = {
     'kentcdodds/stylistic',
     'kentcdodds/es6',
     'kentcdodds/import',
+    'kentcdodds/jest',
     'prettier',
     './common.js',
   ],
