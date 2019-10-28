@@ -34,9 +34,5 @@ module.exports = {
 
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/extensions': ['error', 'never', { svg: 'always', json: 'always' }],
-
-    'jest/valid-title': 'error',
-    'jest/require-to-throw-message': 'error',
-    'jest/no-empty-title': 'off',
   },
 };
