@@ -9,15 +9,19 @@ module.exports = {
     'kentcdodds/react',
     'kentcdodds/jsx-a11y',
     'kentcdodds/jest',
-    './common.js',
     'prettier',
     'prettier/react',
   ],
   rules: {
+    'no-negated-condition': 'off',
+    'arrow-body-style': ['error', 'as-needed'],
+    'max-lines-per-function': 'off',
     complexity: 'off',
     'one-var': ['error', 'never'],
-    'arrow-body-style': ['error', 'as-needed'],
     'no-underscore-dangle': ['error', { allow: ['__NEXT_DATA__'] }],
+
+    'babel/camelcase': 'off',
+    'babel/quotes': 'off',
 
     'jsx-a11y/anchor-is-valid': [
       'error',
@@ -30,5 +34,9 @@ module.exports = {
 
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/extensions': ['error', 'never', { svg: 'always', json: 'always' }],
+
+    'jest/valid-title': 'error',
+    'jest/require-to-throw-message': 'error',
+    'jest/no-empty-title': 'off',
   },
 };

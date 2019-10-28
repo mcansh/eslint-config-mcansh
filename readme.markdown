@@ -11,7 +11,7 @@ $ yarn add -D @mcansh/eslint-config
 then install the peerDependencies
 
 ```bash
-$ install-peerdeps @mcansh/eslint-config
+$ npx install-peerdeps @mcansh/eslint-config --dev
 ```
 
 followed by adding it to your eslint config
