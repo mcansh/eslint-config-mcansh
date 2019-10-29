@@ -1,9 +1,18 @@
+const { overrides, ...config } = require('./typescript');
+
+const [typeDefs, tsOverides] = overrides;
+
+const tsOverideExtends = tsOverides.extends.filter(
+  ex => ex !== 'plugin:@typescript-eslint/recommended'
+);
+
 module.exports = {
-  extends: ['./typescript'],
+  ...config,
   overrides: [
+    typeDefs,
     {
-      files: ['*.ts', '*.tsx'],
-      extends: ['plugin:@typescript-eslint/all'],
+      ...tsOverides,
+      extends: ['plugin:@typescript-eslint/all', ...tsOverideExtends],
     },
   ],
 };
