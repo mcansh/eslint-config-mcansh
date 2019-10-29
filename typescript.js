@@ -1,12 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  extends: [
-    './index.js',
-    'eslint:recommended',
-    'plugin:import/typescript',
-    'plugin:@typescript-eslint/eslint-recommended',
-  ],
+  extends: ['./index.js', 'eslint:recommended'],
   settings: {
     'import/resolver': {
       'babel-plugin-root-import': {},
@@ -23,6 +18,8 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       extends: [
+        'plugin:import/typescript',
+        'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'prettier/@typescript-eslint',
       ],
