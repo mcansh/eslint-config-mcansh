@@ -9,6 +9,7 @@ module.exports = {
     'kentcdodds/react',
     'kentcdodds/jsx-a11y',
     'kentcdodds/jest',
+    'plugin:you-dont-need-lodash-underscore/compatible',
     'prettier',
     'prettier/react',
   ],
