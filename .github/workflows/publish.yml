@@ -15,7 +15,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: |
           npm install
-          tag=$([[ "2.4.0-canary.1" =~ [0-9]+.[0-9]+.[0-9]+-canary.[0-9]+ ]] && echo "canary" || echo "latest")
+          PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
+          tag=$([[ $PACKAGE_VERSION =~ [0-9]+.[0-9]+.[0-9]+-canary.[0-9]+ ]] && echo "canary" || echo "latest")
           npm publish --access public --tag $tag
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -24,7 +25,8 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - run: |
           npm install
-          tag=$([[ "2.4.0-canary.1" =~ [0-9]+.[0-9]+.[0-9]+-canary.[0-9]+ ]] && echo "canary" || echo "latest")
+          PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
+          tag=$([[ $PACKAGE_VERSION =~ [0-9]+.[0-9]+.[0-9]+-canary.[0-9]+ ]] && echo "canary" || echo "latest")
           npm publish --tag $tag
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
