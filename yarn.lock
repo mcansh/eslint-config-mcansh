@@ -2438,10 +2438,10 @@ https-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
-husky@3.0.9:
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-3.0.9.tgz#a2c3e9829bfd6b4957509a9500d2eef5dbfc8044"
-  integrity sha512-Yolhupm7le2/MqC1VYLk/cNmYxsSsqKkTyBhzQHhPK1jFnC89mmmNVuGtLNabjDI6Aj8UNIr0KpRNuBkiC4+sg==
+husky@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-3.1.0.tgz#5faad520ab860582ed94f0c1a77f0f04c90b57c0"
+  integrity sha512-FJkPoHHB+6s4a+jwPqBudBDvYZsoQW5/HBuMSehC8qDiCe50kpcxeqFoDSlow+9I6wg47YxBoT3WxaURlrDIIQ==
   dependencies:
     chalk "^2.4.2"
     ci-info "^2.0.0"
@@ -4887,6 +4887,16 @@ stylelint-prettier@1.1.1:
   integrity sha512-H7Zjb+9ufF0dTjjJ4qSbN/yeAV14BNUK5rl267lvYfmmW4Swlz4a2rfwqqgiN/YlntHXXzM6Nh/UXHFIvLI8zA==
   dependencies:
     prettier-linter-helpers "^1.0.0"
+
+stylelint-processor-styled-components@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/stylelint-processor-styled-components/-/stylelint-processor-styled-components-1.8.0.tgz#7dc48c6c95f9c3c9daa49efa5f3d1be49e7296e2"
+  integrity sha512-sADydhLPwtR9YJBydlO6X209sjT3rG9nr7sn/cEFZtoeZF3tI60HtxIOFC12vVVMvpKFS+E0smMiKA6FcVZO9A==
+  dependencies:
+    "@babel/parser" "^7.0.0"
+    "@babel/traverse" "^7.0.0"
+    micromatch "^4.0.2"
+    postcss "^7.0.0"
 
 stylelint@11.1.1:
   version "11.1.1"
