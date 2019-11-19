@@ -33,7 +33,7 @@
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-config-kentcdodds": "14.6.1",
-    "eslint-config-prettier": "6.6.0",
+    "eslint-config-prettier": "6.7.0",
     "eslint-find-rules": "3.4.0",
     "eslint-plugin-html": "6.0.0",
     "eslint-plugin-import": "2.18.2",
