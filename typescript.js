@@ -4,7 +4,6 @@ module.exports = {
   extends: ['./index.js', 'eslint:recommended'],
   settings: {
     'import/resolver': {
-      'babel-plugin-root-import': {},
       typescript: {},
     },
   },
