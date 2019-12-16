@@ -9,6 +9,7 @@ module.exports = {
   ],
   rules: {
     ...baseConfig.rules,
+    'react/jsx-pascal-case': ['error', { allowAllCaps: true }],
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
