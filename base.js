@@ -10,6 +10,7 @@ module.exports = {
     'plugin:you-dont-need-lodash-underscore/compatible',
     'prettier',
   ],
+  plugins: ['no-null'],
   rules: {
     'no-negated-condition': 'off',
     'arrow-body-style': ['error', 'as-needed'],
@@ -18,6 +19,8 @@ module.exports = {
     'one-var': ['error', 'never'],
     'no-underscore-dangle': ['error', { allow: ['__NEXT_DATA__'] }],
     'no-console': ['error', { allow: ['warn', 'error'] }],
+
+    'no-null/no-null': 2,
 
     'babel/camelcase': 'off',
     'babel/quotes': 'off',

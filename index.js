@@ -18,5 +18,16 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
+    'react/jsx-no-script-url': [
+      'error',
+      [
+        {
+          name: 'Link',
+          props: ['hrefLeft', 'hrefRight'],
+        },
+      ],
+    ],
+    'react/function-component-definition': 'off',
+    'react/no-adjacent-inline-elements': 'error',
   },
 };
