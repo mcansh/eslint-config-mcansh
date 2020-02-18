@@ -7,6 +7,7 @@ module.exports = {
     'kentcdodds/jsx-a11y',
     'prettier/react',
   ],
+  plugins: baseConfig.plugins,
   rules: {
     ...baseConfig.rules,
     'react/jsx-pascal-case': ['error', { allowAllCaps: true }],
