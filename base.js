@@ -1,3 +1,5 @@
+const prettier = require('./prettier.config');
+
 module.exports = {
   extends: [
     'airbnb-base',
@@ -10,6 +12,7 @@ module.exports = {
     'plugin:you-dont-need-lodash-underscore/compatible',
     'prettier',
   ],
+  plugins: ['prettier'],
   rules: {
     'no-negated-condition': 'off',
     'arrow-body-style': ['error', 'as-needed'],
@@ -24,5 +27,7 @@ module.exports = {
 
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/extensions': ['error', 'never', { svg: 'always', json: 'always' }],
+
+    'prettier/prettier': ['error', prettier],
   },
 };
