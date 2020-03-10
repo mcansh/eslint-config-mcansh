@@ -30,6 +30,14 @@ module.exports = {
       rules: {
         'react/prop-types': 'off', // handled by using React.FC<Props>
 
+        '@typescript-eslint/prefer-nullish-coalescing': [
+          'error',
+          {
+            ignoreConditionalTests: false,
+            ignoreMixedLogicalExpressions: false,
+          },
+        ],
+        '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/explicit-member-accessibility': 'error',
         '@typescript-eslint/no-magic-numbers': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
