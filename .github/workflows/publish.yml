@@ -24,6 +24,7 @@ jobs:
         with:
           registry-url: 'https://npm.pkg.github.com'
       - run: |
+          rm -rf .npmrc
           npm install
           PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
           tag=$([[ $PACKAGE_VERSION =~ [0-9]+.[0-9]+.[0-9]+-canary.[0-9]+ ]] && echo "canary" || echo "latest")
