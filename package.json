@@ -35,7 +35,7 @@
     "eslint-config-kentcdodds": "14.8.1",
     "eslint-config-prettier": "6.10.1",
     "eslint-find-rules": "3.4.0",
-    "eslint-plugin-html": "6.0.1",
+    "eslint-plugin-html": "6.0.2",
     "eslint-plugin-import": "2.20.2",
     "eslint-plugin-jest": "23.8.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
