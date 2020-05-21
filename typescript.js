@@ -41,7 +41,7 @@ module.exports = {
         '@typescript-eslint/explicit-member-accessibility': 'error',
         '@typescript-eslint/no-magic-numbers': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-unused-vars': [
           'error',
           {
