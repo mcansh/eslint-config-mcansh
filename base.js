@@ -21,6 +21,9 @@ module.exports = {
     'one-var': ['error', 'never'],
     'no-underscore-dangle': ['error', { allow: ['__NEXT_DATA__'] }],
     'no-console': ['error', { allow: ['warn', 'error'] }],
+    'default-case-last': 'error',
+    'no-restricted-exports': 'error',
+    'no-useless-backreference': 'error',
 
     'babel/camelcase': 'off',
     'babel/quotes': 'off',
