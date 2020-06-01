@@ -1,4 +1,21 @@
+const readPkgUp = require('read-pkg-up');
+
 const prettier = require('./prettier.config');
+
+let hasJest = false;
+
+try {
+  const pkg = readPkgUp.sync({ normalize: true });
+  const allDeps = Object.keys({
+    ...pkg.peerDependencies,
+    ...pkg.devDependencies,
+    ...pkg.dependencies,
+  });
+
+  hasJest = allDeps.includes('jest');
+} catch (error) {
+  // ignore error
+}
 
 module.exports = {
   extends: [
@@ -8,10 +25,10 @@ module.exports = {
     'kentcdodds/stylistic',
     'kentcdodds/es6',
     'kentcdodds/import',
-    'kentcdodds/jest',
+    hasJest ? 'kentcdodds/jest' : null,
     'plugin:you-dont-need-lodash-underscore/compatible',
     'prettier',
-  ],
+  ].filter(Boolean),
   plugins: ['prettier'],
   rules: {
     'no-negated-condition': 'off',
@@ -24,6 +41,7 @@ module.exports = {
     'default-case-last': 'error',
     'no-restricted-exports': 'error',
     'no-useless-backreference': 'error',
+    'no-loss-of-precision': 'error',
 
     'babel/camelcase': 'off',
     'babel/quotes': 'off',
