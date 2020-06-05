@@ -55,7 +55,7 @@
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-prettier": "1.1.2",
     "stylelint-processor-styled-components": "1.10.0",
-    "typescript": "3.9.3"
+    "typescript": "3.9.5"
   },
   "optionalDependencies": {
     "eslint-plugin-jest": ">=22.17.0",
