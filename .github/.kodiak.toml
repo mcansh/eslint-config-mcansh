@@ -1,0 +1,11 @@
+version = 1
+
+[merge]
+method = "squash" # default: "merge", options: "merge", "squash", "rebase"
+delete_branch_on_merge = true # default: false
+
+[merge.message]
+title = "pull_request_title"
+body = "pull_request_body"
+include_pr_number = true
+body_type = "markdown"
