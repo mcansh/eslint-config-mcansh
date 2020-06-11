@@ -1,4 +1,21 @@
+const readPkgUp = require('read-pkg-up');
+
 const baseConfig = require('./base');
+
+let isNextProject = false;
+
+try {
+  const pkg = readPkgUp.sync({ normalize: true });
+  const allDeps = Object.keys({
+    ...pkg.peerDependencies,
+    ...pkg.devDependencies,
+    ...pkg.dependencies,
+  });
+
+  isNextProject = allDeps.includes('next');
+} catch (error) {
+  // ignore error
+}
 
 module.exports = {
   extends: [
@@ -6,7 +23,8 @@ module.exports = {
     'kentcdodds/react',
     'kentcdodds/jsx-a11y',
     'prettier/react',
-  ],
+    isNextProject ? 'plugin:@next/eslint-plugin-next/recommended' : null,
+  ].filter(Boolean),
   plugins: baseConfig.plugins,
   rules: {
     ...baseConfig.rules,

@@ -58,6 +58,7 @@
     "typescript": "3.9.5"
   },
   "optionalDependencies": {
+    "@next/eslint-plugin-next": "9.4.4",
     "eslint-plugin-jest": ">=22.17.0",
     "jest": ">=26",
     "stylelint": ">=13",
