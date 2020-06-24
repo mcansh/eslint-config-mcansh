@@ -5,11 +5,11 @@ const prettier = require('./prettier.config');
 let hasJest = false;
 
 try {
-  const pkg = readPkgUp.sync({ normalize: true });
+  const { packageJson } = readPkgUp.sync({ normalize: true });
   const allDeps = Object.keys({
-    ...pkg.peerDependencies,
-    ...pkg.devDependencies,
-    ...pkg.dependencies,
+    ...packageJson.peerDependencies,
+    ...packageJson.devDependencies,
+    ...packageJson.dependencies,
   });
 
   hasJest = allDeps.includes('jest');
