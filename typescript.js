@@ -18,8 +18,8 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       extends: [
         'plugin:import/typescript',
-        'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
         'prettier/@typescript-eslint',
       ],
       parser: '@typescript-eslint/parser',
@@ -30,13 +30,9 @@ module.exports = {
       rules: {
         'react/prop-types': 'off', // handled by using React.FC<Props>
 
-        '@typescript-eslint/prefer-nullish-coalescing': [
-          'error',
-          {
-            ignoreConditionalTests: false,
-            ignoreMixedLogicalExpressions: false,
-          },
-        ],
+        'no-use-before-define': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/2502
+        '@typescript-eslint/no-use-before-define': 'error',
+        '@typescript-eslint/prefer-nullish-coalescing': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/explicit-member-accessibility': 'error',
         '@typescript-eslint/no-magic-numbers': 'off',

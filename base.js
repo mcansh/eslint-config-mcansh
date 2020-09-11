@@ -42,6 +42,9 @@ module.exports = {
     'no-restricted-exports': 'error',
     'no-useless-backreference': 'error',
     'no-loss-of-precision': 'error',
+    'id-denylist': 'off',
+    'no-promise-executor-return': 'error',
+    'no-unreachable-loop': 'error',
 
     'babel/camelcase': 'off',
     'babel/quotes': 'off',
@@ -50,5 +53,7 @@ module.exports = {
     'import/extensions': ['error', 'never', { svg: 'always', json: 'always' }],
 
     'prettier/prettier': ['error', prettier],
+
+    'jest/no-done-callback': 'error',
   },
 };
