@@ -29,9 +29,23 @@ module.exports = {
       },
       rules: {
         'react/prop-types': 'off', // handled by using React.FC<Props>
+        
+        /**
+          * enforce `import type` style imports
+        */
+        '@typescript-eslint/consistent-type-imports': [
+          'error',
+          { prefer: 'type-imports' },
+        ],
+        'no-duplicate-imports': 'off',
+        '@typescript-eslint/no-duplicate-imports': 'error',
 
-        'no-use-before-define': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/2502
+        /**
+          * resolves https://github.com/typescript-eslint/typescript-eslint/issues/2502
+        */
+        'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': 'error',
+        
         '@typescript-eslint/prefer-nullish-coalescing': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/explicit-member-accessibility': 'error',
