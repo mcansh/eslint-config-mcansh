@@ -3,6 +3,7 @@ const readPkgUp = require('read-pkg-up');
 const prettier = require('./prettier.config');
 
 let hasJest = false;
+let hasLodash = false;
 
 try {
   const { packageJson } = readPkgUp.sync({ normalize: true });
@@ -13,6 +14,7 @@ try {
   });
 
   hasJest = allDeps.includes('jest');
+  hasLodash = allDeps.includes('lodash');
 } catch (error) {
   // ignore error
 }
@@ -26,7 +28,7 @@ module.exports = {
     'kentcdodds/es6',
     'kentcdodds/import',
     hasJest ? 'kentcdodds/jest' : null,
-    'plugin:you-dont-need-lodash-underscore/compatible',
+    hasLodash ? 'plugin:you-dont-need-lodash-underscore/compatible' : null,
     'prettier',
   ].filter(Boolean),
   plugins: ['prettier'],
