@@ -61,21 +61,6 @@ module.exports = {
             ignoreRestSiblings: true,
           },
         ],
-        '@typescript-eslint/ban-types': [
-          'error',
-          {
-            types: {
-              String: {
-                message: 'Use string instead',
-                fixWith: 'string',
-              },
-              null: {
-                message: 'Use undefined instead',
-                fixWith: 'undefined',
-              },
-            },
-          },
-        ],
       },
     },
   ],
