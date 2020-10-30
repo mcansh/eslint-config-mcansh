@@ -55,7 +55,5 @@ module.exports = {
     'import/extensions': ['error', 'never', { svg: 'always', json: 'always' }],
 
     'prettier/prettier': ['error', prettier],
-
-    'jest/no-done-callback': 'error',
   },
 };
