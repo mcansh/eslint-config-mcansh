@@ -26,9 +26,9 @@
     }
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^10.0.1",
-    "@typescript-eslint/eslint-plugin": "^4.7.0",
-    "@typescript-eslint/parser": "^4.7.0",
+    "@next/eslint-plugin-next": "^10.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
     "babel-eslint": "^10.1.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -44,7 +44,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
     "read-pkg-up": "^7.0.1",
-    "stylelint": "^13.7.2",
+    "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
