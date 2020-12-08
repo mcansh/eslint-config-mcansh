@@ -1,4 +1,6 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Next.js",
   "compilerOptions": {
     "allowJs": true,
     "alwaysStrict": true,
@@ -21,11 +23,5 @@
     "removeComments": false,
     "sourceMap": true,
     "downlevelIteration": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./src/*"]
-    }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "cypress"]
 }
