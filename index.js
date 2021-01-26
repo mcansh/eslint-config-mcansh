@@ -57,5 +57,8 @@ module.exports = {
     ],
     'react/function-component-definition': 'off',
     'react/no-adjacent-inline-elements': 'error',
+
+    'react/jsx-newline': 'error',
+    'react/jsx-no-constructed-context-values': 'warn',
   },
 };

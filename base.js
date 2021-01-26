@@ -33,8 +33,10 @@ module.exports = {
   ].filter(Boolean),
   plugins: ['prettier'],
   rules: {
+    'no-nonoctal-decimal-escape': 'error',
     'no-negated-condition': 'off',
-    'arrow-body-style': ['error', 'as-needed'],
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off',
     'max-lines-per-function': 'off',
     complexity: 'off',
     'one-var': ['error', 'never'],
