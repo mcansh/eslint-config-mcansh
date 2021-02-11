@@ -1,7 +1,5 @@
 # eslint-config-mcansh
 
-An eslint config based on airbnb's with common rule changes I make.
-
 ## Installation
 
 ```bash
