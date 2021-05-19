@@ -45,6 +45,8 @@ module.exports = {
          */
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': 'error',
+        
+        '@typescript-eslint/array-type': ['error', { default: 'generic', readonly: 'generic' }],
 
         '@typescript-eslint/prefer-nullish-coalescing': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
