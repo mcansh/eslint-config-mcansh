@@ -1,7 +1,5 @@
 const readPkgUp = require('read-pkg-up');
 
-const prettier = require('./prettier.config');
-
 let hasJest = false;
 let hasLodash = false;
 
@@ -54,6 +52,6 @@ module.exports = {
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/extensions': ['error', 'never', { svg: 'always', json: 'always' }],
 
-    'prettier/prettier': ['error', prettier],
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
   },
 };
