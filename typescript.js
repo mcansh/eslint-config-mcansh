@@ -20,7 +20,6 @@ module.exports = {
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
-        'prettier/@typescript-eslint',
       ],
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
@@ -30,13 +29,6 @@ module.exports = {
       rules: {
         'react/prop-types': 'off', // handled by using `React.FC<Props>` and `React.VFC<Props>`
 
-        /**
-         * enforce `import type` style imports
-         */
-        '@typescript-eslint/consistent-type-imports': [
-          'error',
-          { prefer: 'type-imports' },
-        ],
         'no-duplicate-imports': 'off',
         '@typescript-eslint/no-duplicate-imports': 'error',
 
@@ -45,8 +37,11 @@ module.exports = {
          */
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': 'error',
-        
-        '@typescript-eslint/array-type': ['error', { default: 'generic', readonly: 'generic' }],
+
+        '@typescript-eslint/array-type': [
+          'error',
+          { default: 'generic', readonly: 'generic' },
+        ],
 
         '@typescript-eslint/prefer-nullish-coalescing': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
@@ -63,11 +58,12 @@ module.exports = {
             ignoreRestSiblings: true,
           },
         ],
+        /**
+         * enforce `import type` style imports
+         */
         '@typescript-eslint/consistent-type-imports': [
           'error',
-          { 
-            prefer: 'type-imports'
-          },
+          { prefer: 'type-imports' },
         ],
       },
     },

@@ -22,7 +22,6 @@ module.exports = {
     ...baseConfig.extends.filter(e => e !== 'airbnb-base'),
     'kentcdodds/react',
     'kentcdodds/jsx-a11y',
-    'prettier/react',
     isNextProject ? 'plugin:@next/eslint-plugin-next/recommended' : null,
   ].filter(Boolean),
   plugins: baseConfig.plugins,
