@@ -36,6 +36,10 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
 
+    'react/no-unused-class-component-methods': 'error',
+    'react/no-arrow-function-lifecycle': 'error',
+    'react/no-invalid-html-attribute': 'off',
+    'react/no-namespace': 'error',
     'react/jsx-pascal-case': ['error', { allowAllCaps: true }],
     'jsx-a11y/anchor-is-valid': [
       'error',

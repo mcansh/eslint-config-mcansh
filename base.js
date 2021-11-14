@@ -28,11 +28,11 @@ module.exports = {
     hasJest ? 'kentcdodds/jest' : null,
     hasLodash ? 'plugin:you-dont-need-lodash-underscore/compatible' : null,
     'prettier',
+    'prettier/prettier',
   ].filter(Boolean),
   plugins: ['prettier'],
   rules: {
     'no-negated-condition': 'off',
-    'arrow-body-style': ['error', 'as-needed'],
     'max-lines-per-function': 'off',
     complexity: 'off',
     'one-var': ['error', 'never'],

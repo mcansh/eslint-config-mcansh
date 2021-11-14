@@ -22,39 +22,43 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@babel/eslint-parser": "7.14.3",
-    "@next/eslint-plugin-next": "^10.2.0",
-    "@typescript-eslint/eslint-plugin": "^4.24.0",
-    "@typescript-eslint/parser": "^4.24.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-kentcdodds": "^18.1.0",
+    "@babel/eslint-parser": "7.16.3",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-kentcdodds": "^19.2.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-html": "^6.1.2",
-    "eslint-plugin-import": "^2.23.2",
-    "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-you-dont-need-lodash-underscore": "^6.11.0",
-    "read-pkg-up": "^7.0.1",
-    "stylelint": "^13.13.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-recommended": "^5.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-prettier": "^1.2.0"
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-testing-library": "^5.0.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0",
+    "read-pkg-up": "^7.0.0"
   },
   "devDependencies": {
-    "eslint": "7.26.0",
-    "eslint-find-rules": "3.6.1",
-    "husky": "6.0.0",
+    "@types/prettier": "2.4.2",
+    "eslint": "7.32.0",
+    "eslint-find-rules": "4.0.0",
+    "husky": "7.0.4",
     "npm-run-all": "4.1.5",
-    "prettier": "2.3.0",
-    "typescript": "4.2.4"
+    "prettier": "2.4.1",
+    "typescript": "4.4.4"
   },
   "peerDependencies": {
-    "eslint": "^7.22.0"
+    "eslint": "7.32.0"
+  },
+  "optionalDependencies": {
+    "@next/eslint-plugin-next": "^10.2.0 || ^11.0.0 || ^12.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "stylelint": "^14.0.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended": "^6.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-prettier": "^2.0.0"
   }
 }

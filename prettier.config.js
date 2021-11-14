@@ -1,3 +1,6 @@
+/**
+ * @type {import('prettier').Config}
+ */
 module.exports = {
   printWidth: 80,
   tabWidth: 2,
@@ -6,7 +9,7 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'es5',
   bracketSpacing: true,
-  jsxBracketSameLine: false,
+  bracketSameLine: false,
   proseWrap: 'always',
   arrowParens: 'avoid',
 };
