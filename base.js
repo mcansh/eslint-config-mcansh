@@ -20,10 +20,7 @@ try {
 module.exports = {
   extends: [
     'airbnb-base',
-    'kentcdodds/possible-errors',
-    'kentcdodds/best-practices',
-    'kentcdodds/stylistic',
-    'kentcdodds/es6',
+    'kentcdodds',
     'kentcdodds/import',
     hasJest ? 'kentcdodds/jest' : null,
     hasLodash ? 'plugin:you-dont-need-lodash-underscore/compatible' : null,
