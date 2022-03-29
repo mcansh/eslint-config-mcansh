@@ -22,44 +22,43 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@babel/eslint-parser": "^7.16.5",
+    "@babel/eslint-parser": "^7.17.0",
+    "@next/eslint-plugin-next": "^12.1.2",
     "@rushstack/eslint-patch": "1.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-kentcdodds": "^20.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-config-kentcdodds": "^20.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.0",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jest": "^25.7.0",
+    "eslint-plugin-jest": "^26.1.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-testing-library": "^5.0.3",
+    "eslint-plugin-testing-library": "^5.1.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0",
-    "read-pkg-up": "^7.0.1"
+    "read-pkg-up": "^7.0.1",
+    "stylelint": "^14.6.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended": "^7.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-prettier": "^2.0.0"
   },
   "devDependencies": {
-    "@types/prettier": "^2.4.3",
-    "eslint": "^8.7.0",
+    "@types/prettier": "^2.4.4",
+    "eslint": "^8.12.0",
     "eslint-find-rules": "^4.1.0",
     "husky": "^7.0.4",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.4"
+    "prettier": "^2.6.1",
+    "typescript": "^4.6.3"
   },
   "peerDependencies": {
-    "eslint": "^8.7.0"
-  },
-  "optionalDependencies": {
-    "@next/eslint-plugin-next": "^12.0.8",
-    "@typescript-eslint/eslint-plugin": "^5.10.0",
-    "@typescript-eslint/parser": "^5.10.0",
-    "stylelint": "^14.2.0",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-recommended": "^6.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-prettier": "^2.0.0"
+    "eslint": "^8.12.0",
+    "prettier": "^2.6.1"
   }
 }
