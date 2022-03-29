@@ -1,21 +1,9 @@
-const readPkgUp = require('read-pkg-up');
+require('@rushstack/eslint-patch/modern-module-resolution');
 
-let hasJest = false;
-let hasLodash = false;
+const { hasDep } = require('./_utils');
 
-try {
-  const { packageJson } = readPkgUp.sync({ normalize: true });
-  const allDeps = Object.keys({
-    ...packageJson.peerDependencies,
-    ...packageJson.devDependencies,
-    ...packageJson.dependencies,
-  });
-
-  hasJest = allDeps.includes('jest');
-  hasLodash = allDeps.includes('lodash');
-} catch (error) {
-  // ignore error
-}
+const hasJest = hasDep('jest');
+const hasLodash = hasDep('lodash');
 
 module.exports = {
   extends: [
@@ -28,6 +16,10 @@ module.exports = {
     'prettier/prettier',
   ].filter(Boolean),
   plugins: ['prettier'],
+  // Report unused `eslint-disable` comments.
+  reportUnusedDisableDirectives: true,
+  // Tell ESLint not to ignore dot-files, which are ignored by default.
+  ignorePatterns: ['!.*.js'],
   rules: {
     'no-negated-condition': 'off',
     'max-lines-per-function': 'off',

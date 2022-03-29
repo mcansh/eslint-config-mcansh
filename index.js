@@ -1,21 +1,7 @@
-const readPkgUp = require('read-pkg-up');
-
 const baseConfig = require('./base');
+const { hasDep } = require('./_utils');
 
-let isNextProject = false;
-
-try {
-  const { packageJson } = readPkgUp.sync({ normalize: true });
-  const allDeps = Object.keys({
-    ...packageJson.peerDependencies,
-    ...packageJson.devDependencies,
-    ...packageJson.dependencies,
-  });
-
-  isNextProject = allDeps.includes('next');
-} catch (error) {
-  // ignore error
-}
+const isNextProject = hasDep('next');
 
 module.exports = {
   extends: [
@@ -24,6 +10,7 @@ module.exports = {
     'kentcdodds/jsx-a11y',
     isNextProject ? 'plugin:@next/eslint-plugin-next/recommended' : null,
   ].filter(Boolean),
+  ...baseConfig,
   plugins: baseConfig.plugins,
   rules: {
     ...baseConfig.rules,
